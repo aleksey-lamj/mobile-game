@@ -1,0 +1,34 @@
+main {
+  overflow-x: hidden;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.subtitle-section {
+  display: block;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+.title-section {
+  font-size: 22px;
+  color: #000;
+}
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+.bg-obj::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  background: url('assets/img/bg-obj.png') center no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+  

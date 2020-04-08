@@ -1,0 +1,44 @@
+.landing-footer {
+  color: #aaaaaa;
+  .footer-content {
+    padding: 60px 0;
+    margin: 40px 0;
+    background-color: #fafbff;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .footer-nav {
+    width: 70%;
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      li a {
+        padding: 10px;
+        color: #aaaaaa;
+        letter-spacing: 1.6px;
+        font-weight: 700;
+        font-size: 19px;
+        text-transform: uppercase;
+        transition: color 300ms;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+  .privacy {
+    text-transform: uppercase;
+    font-size: 13px;
+    span {
+      padding: 0 10px 0 0;
+    }
+  }
+  .copyright {
+    display: flex;
+    justify-content: center;
+  }
+}

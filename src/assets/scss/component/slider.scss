@@ -1,0 +1,130 @@
+.slider {
+    .slider-wrap {
+      min-height: 300px;
+      .hide {
+        display: none;
+      }
+      .active {
+        display: block;
+        animation: fade 600ms ease;
+      }
+    }
+    .dots-wrap {
+      margin: 0 30px;
+      .dot {
+        display: inline-block;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        margin: 0 5px;
+        border-radius: 50%;
+        border: 2px solid #eeeeee;
+        cursor: pointer;
+        transition: border 200ms;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: transparent;
+          transition: transform 300ms;
+        }
+        &.active {
+          border: 3px solid #5f3dff;
+          cursor: default;
+          &::before {
+            background: #5f3dff;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+      }
+    }
+    
+    .item {
+      h2 {
+        margin: 10px 0 20px 0;
+        font-size: 60px;
+        color: #044c85;
+        font-weight: 400;
+      }
+      p {
+        line-height: 40px;
+        font-weight: 200;
+        font-size: 19px;
+      }
+    }
+  
+    .slider-nav {
+      display: flex;
+      align-items: center;
+      .prev,
+      .next {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        width: 80px;
+        text-transform: uppercase;
+        font-size: 12px;
+        cursor: pointer;
+        transition: color 200ms;
+        svg {
+          fill: #999999;
+          width: 17px;
+          height: 12px;
+          transition: fill 200ms;
+        }
+        &:hover {
+          color: #3f3f4a;
+          svg {
+            fill: #3f3f4a;
+          }
+        }
+      }
+      .prev:hover {
+        svg {
+          animation: slide1-left 800ms infinite;
+        }
+      }
+      .next:hover {
+        svg {
+          animation: slide1-right 800ms infinite;
+        }
+      }
+    }
+  }
+  
+  @keyframes slide1-left {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide1-right {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }

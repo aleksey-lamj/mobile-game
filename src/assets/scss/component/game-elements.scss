@@ -1,0 +1,79 @@
+.game-el {
+  margin: 100px 0 0 0;
+  position: relative;
+  &.bg-obj::after {
+    transform: rotate(250deg);
+    top: 50%;
+    right: -50%;
+  }
+  &-subtitle {
+    color: #00578d;
+  }
+  .slider {
+    .dots-wrap {
+      margin: 50px 0 0 0;
+    }
+    &-wrap {
+      .active {
+        animation: game-el-slide 1s ease-in-out;
+      }
+    }
+    @keyframes game-el-slide {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  &-slider {
+    display: flex;
+    margin: 90px 0 0 0;
+    justify-content: center;
+    &--button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        outline: none;
+      }
+      svg {
+        fill: #cccccc;
+        width: 68px;
+        transition: fill 300ms;
+      }
+      &:hover {
+        svg {
+          fill: #888888;
+        }
+      }
+    }
+
+    .item {
+      position: relative;
+      .price-wrap {
+        position: absolute;
+        top: 0;
+        right: 10%;
+        @include circle-center(130px);
+        flex-direction: column;
+        background-color: #6048ff;
+        color: #fff;
+        .price {
+          font-size: 38px;
+          font-weight: 700;
+        }
+        .money {
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 2.4px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

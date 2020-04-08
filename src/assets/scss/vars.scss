@@ -1,0 +1,16 @@
+$txt-color: #79796a;
+
+$desktopWidth: 1200px;
+$tableWidth: 992px;
+$smTableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+
+@mixin circle-center($size) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

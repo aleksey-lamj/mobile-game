@@ -1,0 +1,85 @@
+.feedback {
+  margin: 200px 0 0 0;
+  .container {
+    max-width: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: space-around;
+  }
+  &-title {
+    position: relative;
+    max-width: 350px;
+    font-size: 48px;
+    font-weight: 500;
+    color: #222222;
+    &::before {
+      content: "“";
+      display: block;
+      font-size: 250px;
+      height: 100px;
+      font-weight: 500;
+      color: #e9effc;
+    }
+  }
+
+  .customers {
+    max-width: 300px;
+    &--text {
+      position: relative;
+      font-size: 13px;
+      line-height: 33px;
+      padding: 50px 25px 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #e9effc;
+      background: #fff;
+      &::after {
+        content: "◤";
+        position: absolute;
+        bottom: -26px;
+        left: 0;
+        font-size: 35px;
+        text-shadow: -1px 9px 10px #e9effc;
+        color: #fff;
+      }
+    }
+    .stars-wrap {
+      margin: 20px 0 0 0;
+      svg {
+        width: 21px;
+        height: 19px;
+      }
+    }
+    &:nth-child(3) {
+      .author {
+        .first-letter {
+          background-color: #bfcfff;
+        }
+      }
+    }
+    &:nth-child(4) {
+      .author {
+        .first-letter {
+          background-color: #99ccff;
+        }
+      }
+    }
+    .author {
+      margin: 15px 0 0 0;
+      display: flex;
+      align-items: center;
+      .first-letter {
+        @include circle-center(70px);
+        background-color: #5f3dff;
+        font-size: 29px;
+        color: #fff;
+        font-weight: 700;
+      }
+      .name {
+        margin: 0 0 0 20px;
+        font-size: 17px;
+        color: #212121;
+      }
+    }
+  }
+}

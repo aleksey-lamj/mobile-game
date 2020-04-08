@@ -1,0 +1,23 @@
+@import "../../../node_modules/normalize.css/normalize.css";
+@import "./fonts";
+@import "./vars";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  &::after {
+    box-sizing: border-box;
+  }
+  &::before {
+    box-sizing: border-box;
+  }
+}
+@import "./utils";
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  color: $txt-color;
+}
+@import "./component/app-component";
+@import './media';

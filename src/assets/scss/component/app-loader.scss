@@ -1,0 +1,37 @@
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 200px auto;
+    .app-link {
+      position: relative;
+      padding: 35px 35px 25px 35px;
+      margin: 10px;
+      display: flex;
+      background: #dfe5e9;
+      border-radius: 9px;
+      transition: background 1s, transform 300ms;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, #7920e6, #6048ff);
+        border-radius: 9px;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      &:hover {
+        transform: scale(1.02);
+        &::after {
+          opacity: 1;
+        }
+      }
+      picture {
+        z-index: 3;
+      }
+    }
+  }
